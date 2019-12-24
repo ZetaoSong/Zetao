@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.szt.mapper.UserMapper">
+<insert id="toAdd" parameterType="com.szt.bean.CarDomain">
+INSERT INTO car(carNumber,carType,jd,wd,regdate,NAME,phone,lawMessage,isodd,lawAddr) VALUES(#{carNumber},#{carType},#{jd},#{wd},#{regdate},#{uname},#{phone},#{lawMessage},#{isodd},#{lawAddr})
+
+</insert>
+<select id="getList" resultType="com.szt.bean.CarDomain" parameterType="int">
+SELECT * FROM car where 1=1
+<if test="lawAddr!=null and lawAddr!=''">
+AND lawAddr
+<foreach collection="list" close=")" open="in(" separator="," item="a">
+#{a}
+
+</foreach>
+)
+
+
+
+
+
+</if>
+
+</select>
+</mapper>
+
