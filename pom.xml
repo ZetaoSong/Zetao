@@ -8,7 +8,7 @@
 		<!-- 设置项目字符集 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- spring版本号 -->
-		<spring.version>4.3.2.RELEASE</spring.version>
+		<spring.version>5.2.22.RELEASE</spring.version>
 	</properties>
 	<dependencies>
 		<!-- 配置servlet -->
